@@ -107,4 +107,9 @@ public class RowBoat extends Racer implements NavalRacer
 	*@return true if the team was successfully set, false otherwise
 	*/
 	public boolean setTeam(Team team) { this.team = team; return this.team.equals(team); }
+
+	@Override
+	public void run() {
+
+	}
 }

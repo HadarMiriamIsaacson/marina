@@ -102,4 +102,9 @@ public class SpeedBoat extends Racer implements NavalRacer
 	*@return true if the Team was successfully set, false otherwise.
 	 */
 	public boolean setTeam(Team team) { this.team = team; return this.team.equals(team); }
+
+	@Override
+	public void run() {
+
+	}
 }

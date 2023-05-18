@@ -59,4 +59,9 @@ public class Helicopter extends Racer implements AerialRacer
 	 */
 	@Override
 	public String describeSpecific() { return ""; }
+
+	@Override
+	public void run() {
+
+	}
 }

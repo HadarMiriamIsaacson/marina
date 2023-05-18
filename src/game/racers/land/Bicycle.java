@@ -84,4 +84,9 @@ public class Bicycle extends Racer implements LandRacer
      * @return a string that describes this bicycle racer
      */
 	public boolean setType(BicycleType type) { this.type = type; return this.type.equals(type); }
+
+	@Override
+	public void run() {
+
+	}
 }

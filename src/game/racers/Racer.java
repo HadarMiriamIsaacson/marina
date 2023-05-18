@@ -8,6 +8,7 @@ import game.arenas.Arena;
 import utilities.EnumContainer.Color;
 import utilities.Fate;
 import utilities.Mishap;
+import utilities.Myobservable;
 import utilities.Point;
 
 
@@ -18,7 +19,7 @@ import utilities.Point;
 *movement of the racer, introduction of the racer, describing the racer, and determining if the racer has a mishap.
 *It also includes abstract methods that will be implemented by each specific racer class.
 */
-public abstract class Racer 
+public abstract class Racer extends Myobservable implements Runnable
 {
 	
 	

@@ -86,4 +86,9 @@ public class Horse extends Racer implements LandRacer
 	 * @return true if the breed was set successfully, false otherwise.
 	 */
 	public boolean setEngine(Breed breed) { this.breed = breed; return this.breed.equals(breed); }
+
+	@Override
+	public void run() {
+
+	}
 }

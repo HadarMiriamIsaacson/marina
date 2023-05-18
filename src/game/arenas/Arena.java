@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import game.arenas.exceptions.RacerLimitException;
 import game.arenas.exceptions.RacerTypeException;
 import game.racers.Racer;
+import utilities.Myobserver;
 import utilities.Point;
 
 
@@ -19,7 +20,7 @@ import utilities.Point;
 *and lists for active racers and completed racers. It also provides methods for adding a racer to the arena,
 *initializing the race, playing turns for all the racers, crossing the finish line, and showing the results.
 */
-public abstract class Arena 
+public abstract class Arena implements Myobserver
 {
 	
 	
@@ -71,6 +72,7 @@ public abstract class Arena
 			throw new RacerLimitException(getMaxRacers(), newRacer.getSerialNumber());
 		
 		// if not then add a new racer
+		newRacer.register(this);
 		
 		this.addActiveRacer(newRacer);
 	}
@@ -237,4 +239,9 @@ public abstract class Arena
 	*@param racers a list of Racer objects to remove completed racers from
 	*/
 	public void removeCompletedRacers(Racer racer) {this.completedRacers.remove(racer);}//help function
+
+	@Override
+	public synchronized void update(Object o){
+		crossFinishLine((Racer)o);
+	}
 }

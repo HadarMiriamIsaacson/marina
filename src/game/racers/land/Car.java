@@ -85,4 +85,9 @@ public class Car extends Racer implements LandRacer
 	*@return true if the type of engine was successfully set to the specified value, false otherwise
 	*/
 	public boolean setEngine(Engine engine) { this.engine = engine; return this.engine.equals(engine); }
+
+	@Override
+	public void run() {
+
+	}
 }

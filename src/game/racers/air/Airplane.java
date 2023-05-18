@@ -68,5 +68,10 @@ public class Airplane extends Racer implements AerialRacer
      * @return a String that describes the specific properties of this airplane
      */
 	@Override
-	public String describeSpecific() { return ", Number Of Wheels: " + this.wheeled.getNumOfWheels(); }	
+	public String describeSpecific() { return ", Number Of Wheels: " + this.wheeled.getNumOfWheels(); }
+
+	@Override
+	public void run() {
+
+	}
 }
